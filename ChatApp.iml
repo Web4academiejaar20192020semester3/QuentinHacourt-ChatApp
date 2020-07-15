@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/web/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/web" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../drivers/jackson-annotations-2.7.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../drivers/jackson-core-2.7.4.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../drivers/jackson-databind-2.7.4.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../drivers/javax.websocket-api-1.1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../drivers/jstl-1.2.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../drivers/junit4.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../drivers/postgresql-42.2.8.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/apache-maven/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-artifact/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-artifact/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-builder-support/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-builder-support/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-compat/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-compat/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-core/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-core/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-core/src/test/projects/lifecycle-executor/project-with-additional-lifecycle-elements/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-core/src/test/projects/lifecycle-executor/project-with-additional-lifecycle-elements/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/examples/simple-project/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/examples/simple-project/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/embedder-test-project/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/embedder-test-project/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/aggregate-mojo-failure/plugin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/bad-build-plan/plugin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/bad-ext-plugin-dep-ver/plugin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/bad-ext-plugin-maven-ver/plugin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/config-rdonly-mojo-param/plugin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/duplicated-attachments/plugin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/err-resolving-project-dep/project/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/err-resolving-project-dep/project/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/ext-plugin-realm-error/plugin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/ext-plugin-version-err/plugin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/ext-realm-error/ext/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/missing-direct-invoke-mojo/plugin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/missing-module-pom/child1/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/missing-module-pom/child1/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/missing-req-mojo-param/plugin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/mojo-config-error/plugin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/mojo-exec-err/plugin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/mojo-lookup-err/plugin/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/profile-activator-lookup-err/ext/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/project-dep-missing/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/project-dep-missing/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/project-mojo-failure/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/error-reporting-projects/project-mojo-failure/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/projects/isolated-project-getting-parent-pom/project/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-embedder/src/test/projects/isolated-project-getting-parent-pom/project/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-model-builder/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-model-builder/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-model/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-model/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-plugin-api/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-plugin-api/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-resolver-provider/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-resolver-provider/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-settings-builder/src/main/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-settings-builder/src/test/java" />
+          <root url="jar://$MODULE_DIR$/../../drivers/apache-maven-3.6.2-src.zip!/apache-maven-3.6.2/maven-slf4j-provider/src/main/java" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+  </component>
+</module>
