@@ -65,4 +65,15 @@ public class PersonRepositoryStub implements PersonRepository {
 			return null;
 		}
 	}
+
+	public void setStatus(String personId, String status) {
+        if(personId == null || personId.isEmpty() || status == null || status.isEmpty()){
+            throw new IllegalArgumentException("no id or status given");
+        }
+        persons.get(personId).setStatus(status);
+	}
+
+    public void addFriend(String personId, String friendId){
+        persons.get(personId).addFriend(persons.get(friendId));
+    }
 }

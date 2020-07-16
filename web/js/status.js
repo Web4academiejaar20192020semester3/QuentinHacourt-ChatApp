@@ -2,7 +2,7 @@ var getStatusRequest = new XMLHttpRequest();
 var updateStatusRequest = new XMLHttpRequest();
 
 function updateStatus() {
-    var statusText = document.getElementById("status_input").value;
+    var statusText = document.getElementById("status-input").value;
     var information = "status=" + encodeURIComponent(statusText);
     updateStatusRequest.open("POST", "ManageStatusServlet", true);
     newQuoteRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -38,9 +38,8 @@ function getStatus() {
 }
 
 function online() {
-    // TODO: check if this sets background color to green and text to "Online"
-    document.getElementById("status").style.backgroundColor = 'green';
-    document.querySelector("statusText").textContent = 'Online';
+    document.getElementById("status-div").style.backgroundColor = 'green';
+    document.querySelector("status-p").textContent = 'Online';
 }
 
 function away() {

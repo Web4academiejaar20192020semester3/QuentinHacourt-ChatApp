@@ -38,4 +38,12 @@ public class PersonService {
 	private PersonRepository getPersonRepository() {
 		return personRepository;
 	}
+
+	public void setStatus(String personId, String status){
+		personRepository.setStatus(personId,status);
+	}
+
+    public void addFriend(String personId, String friendId){
+        personRepository.addFreind(personId, friendId);
+    }
 }

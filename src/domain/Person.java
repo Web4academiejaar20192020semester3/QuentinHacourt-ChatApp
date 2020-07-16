@@ -5,17 +5,19 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Person {
-
 	private String userId;
 	private String password;
 	private String salt;
 	private String firstName;
 	private String lastName;
     private String status;
+    private Map<String,Person> friends;
 
 	public Person(String userId, String password, String firstName,
 			String lastName) {
@@ -23,6 +25,7 @@ public class Person {
 		setHashedPassword(password);
 		setFirstName(firstName);
 		setLastName(lastName);
+        this.friends = new HashMap<>();
 	}
 
 	public Person(String userId, String password, String salt,
@@ -146,5 +149,17 @@ public class Person {
 
     public String getStatus() {
         return status;
+    }
+
+    public Person getFriend(String userId){
+        return friends.get(userId);
+    }
+
+    public void addFriend(Person person){
+        friends.put(person.userId, person);
+    }
+
+    public Map<String, Person> getFriendList() {
+        return friends;
     }
 }

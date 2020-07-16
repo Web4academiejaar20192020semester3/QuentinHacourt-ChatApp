@@ -13,8 +13,31 @@
 		<jsp:param name="title" value="Chat" />
 	</jsp:include>
 	<main>
-        <section class="status">
-            <p id="statusText">${user.getStatus()}</p>
+        <section id="status-section">
+            <h3>Your Status</h3>
+            <div class="status-div">
+                <p id="status-p">${user.getStatus()}</p>
+            </div>
+        </section>
+
+        <table id="friends-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="friends">
+
+            </tbody>
+        </table>
+
+
+
+        <section id="update-status-section">
+            <p>Update status:</p>
+            <input type="text" id="status-input">
+            <button id="update-status-button" onclick="updateStatus()" value="update-status">
         </section>
     </main>
 	<jsp:include page="footer.jsp">
