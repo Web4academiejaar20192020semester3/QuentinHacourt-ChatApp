@@ -3,16 +3,10 @@ var updateStatusRequest = new XMLHttpRequest();
 
 function updateStatus() {
     var statusText = document.getElementById("status-input").value;
-    var information = "status=" + encodeURIComponent(statusText);
-    updateStatusRequest.open("POST", "ManageStatusServlet", true);
-    newQuoteRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    newQuoteRequest.send(information);
-}
-
-function checkStatus() {
-    getStatusRequest.open("GET", "ManageStatusServlet", true);
-    getStatusRequest.onreadystatechange = getStatus();
-    getStatusRequest.send(null);
+    alert(statusText)
+    updateStatusRequest.open("POST", "Controller?action=UpdateStatus&status=" + statusText , true);
+    updateStatusRequest.onreadystatechange = getStatus;
+    updateStatusRequest.send(null);
 }
 
 function getStatus() {

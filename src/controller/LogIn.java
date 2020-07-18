@@ -42,6 +42,8 @@ public class LogIn extends RequestHandler {
 			request.setAttribute("errors", errors);
 		}
 
+
+
 		return destination;
 	}
 
@@ -49,6 +51,7 @@ public class LogIn extends RequestHandler {
 			HttpServletResponse response) {
 		HttpSession session = request.getSession();
 		session.setAttribute("user", person);
+        person.setStatus("Online");
 	}
 
 }

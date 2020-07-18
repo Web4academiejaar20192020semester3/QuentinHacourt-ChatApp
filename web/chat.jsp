@@ -5,9 +5,14 @@
 
 <!DOCTYPE html>
 <html>
-<jsp:include page="head.jsp">
-	<jsp:param name="title" value="Chat" />
-</jsp:include>
+    <head>
+        <script type="text/javascript" src="js/status.js"></script>
+        <script type="text/javascript" src="js/friends.js"></script>
+        <jsp:include page="head.jsp">
+	        <jsp:param name="title" value="Chat" />
+        </jsp:include>
+
+    </head>
 <body>
 	<jsp:include page="header.jsp">
 		<jsp:param name="title" value="Chat" />
@@ -16,7 +21,7 @@
         <section id="status-section">
             <h3>Your Status</h3>
             <div class="status-div">
-                <p id="status-p">${user.getStatus()}</p>
+                <p id="status-p">${status}</p>
             </div>
         </section>
 
@@ -37,7 +42,7 @@
         <section id="update-status-section">
             <p>Update status:</p>
             <input type="text" id="status-input">
-            <button id="update-status-button" onclick="updateStatus()" value="update-status">
+            <button id="update-status-button" onclick="updateStatus()" value="update-status">Update Status </button>
         </section>
     </main>
 	<jsp:include page="footer.jsp">

@@ -44,6 +44,6 @@ public class PersonService {
 	}
 
     public void addFriend(String personId, String friendId){
-        personRepository.addFreind(personId, friendId);
+        personRepository.addFriend(personId, friendId);
     }
 }

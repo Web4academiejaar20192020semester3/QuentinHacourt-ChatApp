@@ -13,7 +13,6 @@ function showFriends() {
         if(setStatusRequest.readyState === 4){
             let serverResponse = JSON.parse(getFriendsRequest.responseText);
             let friends = serverResponse.friends;
-            // TODO: do something with friends
             clearTable();
             let serverResponse = JSON.parse(friendsRequest.responseText);
             let friends = document.getElementById("friends");
