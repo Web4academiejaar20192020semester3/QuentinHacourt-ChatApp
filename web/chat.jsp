@@ -21,7 +21,7 @@
         <section id="status-section">
             <h3>Your Status</h3>
             <div class="status-div">
-                <p id="status-p">${status}</p>
+                <p id="status-p">${user.getStatus()}</p>
             </div>
         </section>
 

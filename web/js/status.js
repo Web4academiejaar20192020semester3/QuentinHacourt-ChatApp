@@ -1,18 +1,22 @@
-var getStatusRequest = new XMLHttpRequest();
-var updateStatusRequest = new XMLHttpRequest();
+var xhr = new XMLHttpRequest();
 
 function updateStatus() {
     var statusText = document.getElementById("status-input").value;
-    alert(statusText)
-    updateStatusRequest.open("POST", "Controller?action=UpdateStatus&status=" + statusText , true);
-    updateStatusRequest.onreadystatechange = getStatus;
-    updateStatusRequest.send(null);
+    xhr.open("POST", "Controller?action=UpdateStatus&status=" + statusText , true);
+    xhr.onreadystatechange = getStatus;
+    xhr.send(null);
+}
+
+function fetchStatus(){
+    xhr.open("GET","Controller?action=GetStatus", true);
+    xhr.onreadystatechange = getStatus;
+    xhr.send(null);
 }
 
 function getStatus() {
-    if(getStatusRequest.status === 200) {
-        if(setStatusRequest.readyState === 4){
-            let serverResponse = JSON.parse(getStatusRequest.responseText);
+    if(xhr.status === 200) {
+        if(xhr.readyState === 4){
+            let serverResponse = JSON.parse(xhr.responseText);
             let status = serverResponse.status;
             switch(status.toLowerCase()){
                 case "online":
@@ -32,21 +36,42 @@ function getStatus() {
 }
 
 function online() {
-    document.getElementById("status-div").style.backgroundColor = 'green';
-    document.querySelector("status-p").textContent = 'Online';
+    let div = document.getElementById("status-div");
+    let p = document.getElementById("status-p");
+    p.innerHTML = "";
+    let text = document.createTextNode("Online");
+    p.appendChild(text);
+    p.style.backgroundColor = 'green'
+    div.appendChild(p);
 }
 
 function away() {
-    document.getElementById("status").style.backgroundColor = 'orange';
-    document.querySelector("statusText").textContent = 'Away';
+    let div = document.getElementById("status-div");
+    let p = document.getElementById("status-p");
+    p.innerHTML = "";
+    let text = document.createTextNode("Away");
+    p.appendChild(text);
+    p.style.backgroundColor = 'orange'
+    div.appendChild(p);
 }
 
 function offline() {
-    document.getElementById("status").style.backgroundColor = 'red';
-    document.querySelector("statusText").textContent = 'Offline';
+    let div = document.getElementById("status-div");
+    let p = document.getElementById("status-p");
+    p.innerHTML = "";
+    let text = document.createTextNode("Offline");
+    p.appendChild(text);
+    p.style.backgroundColor = 'red'
+    div.appendChild(p);
 }
 
-function other(text) {
-    document.getElementById("status").style.backgroundColor = 'blue';
-    document.querySelector("statusText").textContent = text;
+function other(status) {
+    alert(status)
+    let div = document.getElementById("status-div");
+    let p = document.getElementById("status-p");
+    p.innerHTML = "";
+    let text = document.createTextNode(status);
+    p.appendChild(text);
+    p.style.backgroundColor = 'blue'
+    div.appendChild(p);
 }

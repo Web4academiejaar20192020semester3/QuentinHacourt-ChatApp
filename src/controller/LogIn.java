@@ -1,8 +1,10 @@
 package controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -13,9 +15,8 @@ import domain.PersonService;
 public class LogIn extends RequestHandler {
 
 	@Override
-	public String handleRequest(HttpServletRequest request,
-			HttpServletResponse response) {
-		String destination = "index.jsp";
+	public void handleRequest(HttpServletRequest request,
+			HttpServletResponse response) throws IOException, ServletException {
 		List<String> errors = new ArrayList<String>();
 
 		String email = request.getParameter("email");
@@ -32,6 +33,7 @@ public class LogIn extends RequestHandler {
 			PersonService personService = super.getPersonService();
 			Person person = personService.getAuthenticatedUser(email, password);
 			if (person != null) {
+				person.setStatus("Online");
 				createSession(person, request, response);
 			} else {
 				errors.add("No valid email/password");
@@ -41,17 +43,13 @@ public class LogIn extends RequestHandler {
 		if (errors.size() > 0) {
 			request.setAttribute("errors", errors);
 		}
-
-
-
-		return destination;
+		request.getRequestDispatcher("index.jsp").forward(request,response);
 	}
 
 	private void createSession(Person person, HttpServletRequest request,
 			HttpServletResponse response) {
 		HttpSession session = request.getSession();
 		session.setAttribute("user", person);
-        person.setStatus("Online");
 	}
 
 }

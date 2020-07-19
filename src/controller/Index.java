@@ -5,9 +5,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class Chat extends RequestHandler {
+public class Index extends RequestHandler {
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        request.getRequestDispatcher("chat.jsp").forward(request,response);
+        request.getRequestDispatcher("index.jsp").forward(request,response);
     }
 }

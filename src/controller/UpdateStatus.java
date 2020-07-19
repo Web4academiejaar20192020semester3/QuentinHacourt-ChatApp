@@ -1,24 +1,32 @@
 package controller;
 
+import domain.Person;
 import domain.PersonService;
+
+import java.io.IOException;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 public class UpdateStatus extends RequestHandler {
     @Override
-    public String handleRequest(HttpServletRequest request, HttpServletResponse response) {
-        System.out.println("STATUS");
-        PersonService personService = super.getPersonService();
-        request.getSession().setAttribute("status",request.getParameter("status"));
-        request.getSession().setAttribute("otherText",request.getParameter("otherText"));
-
-        personService.setStatus((String)request.getSession().getAttribute("personId"),request.getParameter("status"));
-        return "chat.jsp";
+    public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        PersonService personService = getPersonService();
+        Person person = ((Person)(request.getSession().getAttribute("user")));
+        personService.setStatus(person.getUserId(), request.getParameter("status"));
+        response.getWriter().write(this.toJSON(request.getParameter("status")));
     }
 
     @Override
     public void setModel(PersonService personService) {
         super.setModel(personService);
+    }
+
+    private String toJSON(String status){
+        StringBuffer json = new StringBuffer();
+        json.append("{\"status\" : \"");
+        json.append(status);
+        json.append("\"}");
+        return json.toString();
     }
 }
