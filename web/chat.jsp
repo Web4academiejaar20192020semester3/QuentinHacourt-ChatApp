@@ -11,7 +11,6 @@
         <jsp:include page="head.jsp">
 	        <jsp:param name="title" value="Chat" />
         </jsp:include>
-
     </head>
 <body>
 	<jsp:include page="header.jsp">
@@ -43,6 +42,12 @@
             <p>Update status:</p>
             <input type="text" id="status-input">
             <button id="update-status-button" onclick="updateStatus()" value="update-status">Update Status </button>
+        </section>
+
+        <section id="add-friend-section">
+            <p>add friend:</p>
+            <input type="text" id="friendId">
+            <button onclick="addFriend()">Add friend</button>
         </section>
     </main>
 	<jsp:include page="footer.jsp">

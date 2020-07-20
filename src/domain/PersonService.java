@@ -46,4 +46,8 @@ public class PersonService {
     public void addFriend(String personId, String friendId){
         personRepository.addFriend(personId, friendId);
     }
+
+    public List<Person> getFriends(String userId){
+        return getPerson(userId).getFriends();
+    }
 }

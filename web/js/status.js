@@ -7,12 +7,6 @@ function updateStatus() {
     xhr.send(null);
 }
 
-function fetchStatus(){
-    xhr.open("GET","Controller?action=GetStatus", true);
-    xhr.onreadystatechange = getStatus;
-    xhr.send(null);
-}
-
 function getStatus() {
     if(xhr.status === 200) {
         if(xhr.readyState === 4){

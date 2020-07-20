@@ -11,8 +11,9 @@ public class AddFriend extends RequestHandler {
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         Person person = (Person) request.getSession().getAttribute("user");
+        String friendId = request.getParameter("friendId");
         try{
-            person.addFriend(getPersonService().getPerson(request.getParameter("email")));
+            getPersonService().addFriend(person.getUserId(), friendId);
         }
         catch (Exception e){
             throw new IOException("This person doesn't exist.");

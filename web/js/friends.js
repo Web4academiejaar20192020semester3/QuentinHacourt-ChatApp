@@ -1,22 +1,30 @@
-var friendsRequest = new XMLHttpRequest();
-var addNewFriendRequest
+window.onload = fetchFriends;
 
-function getFriends() {
-    getFriendsRequest.open("GET", "Controller?action=Friendlist", true);
-    getFriendsRequest.onreadystatechange = getStatus();
-    getFriendsRequest.send(null);
-    setTimeout(getPeople, 1000);
+var xhr = new XMLHttpRequest();
+
+function addFriend() {
+    let friendId = document.getElementById("friendId");
+    xhr.open("POST", "Controller?action=AddFriend&friendId=" + friendId.value , true);
+    xhr.onreadystatechange = fetchFriends;
+    xhr.send(null);
+    friendId.value = "";
 }
 
-function showFriends() {
-    if(getFriendsRequest.status === 200) {
-        if(setStatusRequest.readyState === 4){
-            let serverResponse = JSON.parse(getFriendsRequest.responseText);
-            let friends = serverResponse.friends;
+function fetchFriends(){
+    xhr.open("GET","Controller?action=GetFriends", true);
+    xhr.onreadystatechange = getFriends;
+    xhr.send(null);
+    // TODO: add timer
+    // setTimeout(fetchFriends, 5000);
+}
+
+function getFriends() {
+    if(xhr.status === 200) {
+        if(xhr.readyState === 4){
             clearTable();
-            let serverResponse = JSON.parse(friendsRequest.responseText);
-            let friends = document.getElementById("friends");
-            let count = 1;
+            let serverResponse = JSON.parse(xhr.responseText);
+            let friendsTable = document.getElementById("friends-table");
+            // let count = 1;
             for(let person in serverResponse){
                 let tr = document.createElement("tr");
                 let tdName = document.createElement("td");
@@ -27,26 +35,18 @@ function showFriends() {
                 tr.appendChild(tdName);
                 tr.appendChild(tdStatus);
                 tr.className = "friendlist";
-                friends.appendChild(tr);
-                count++;
+                friendsTable.appendChild(tr);
+                // count++;
             }
-            timeoutId = setTimeout(getFriendlist,20000);
+            timeoutId = setTimeout(fetchFriends,20000);
         }
     }
 }
 
 function clearTable(){
     let friends = document.querySelectorAll('.friendlist');
-    let table = document.getElementById('friends');
+    let tableBody = document.getElementById('friends-table');
     for (let i=0;i<friends.length;i++){
-        table.removeChild(friends[i]);
+        tableBody.removeChild(friends[i]);
     }
-}
-
-function addNewFriend() {
-    let friendId = document.getElementById("friendId");
-    let url = "Controller?action=AddFriend&friendId=" + friendId.value;
-    addNewFriendRequest.open("GET", url, true);
-    addNewFriendRequest.send(null);
-    friendId.value = "";
 }

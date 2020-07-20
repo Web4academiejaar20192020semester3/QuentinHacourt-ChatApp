@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 
 import domain.Person;
-import domain.Role;
 
 public class PersonRepositoryStub implements PersonRepository {
 	private Map<String, Person> persons = new HashMap<String, Person>();
