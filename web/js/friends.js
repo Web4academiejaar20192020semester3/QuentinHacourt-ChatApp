@@ -4,7 +4,8 @@ var xhr = new XMLHttpRequest();
 
 function addFriend() {
     let friendId = document.getElementById("friendId");
-    xhr.open("POST", "Controller?action=AddFriend&friendId=" + friendId.value , true);
+    let url = "Controller?action=AddFriend&friendId=" + friendId;
+    xhr.open("POST", url , true);
     xhr.onreadystatechange = fetchFriends;
     xhr.send(null);
     friendId.value = "";
@@ -14,8 +15,6 @@ function fetchFriends(){
     xhr.open("GET","Controller?action=GetFriends", true);
     xhr.onreadystatechange = getFriends;
     xhr.send(null);
-    // TODO: add timer
-    // setTimeout(fetchFriends, 5000);
 }
 
 function getFriends() {
@@ -24,7 +23,6 @@ function getFriends() {
             clearTable();
             let serverResponse = JSON.parse(xhr.responseText);
             let friendsTable = document.getElementById("friends-table");
-            // let count = 1;
             for(let person in serverResponse){
                 let tr = document.createElement("tr");
                 let tdName = document.createElement("td");
@@ -36,9 +34,8 @@ function getFriends() {
                 tr.appendChild(tdStatus);
                 tr.className = "friendlist";
                 friendsTable.appendChild(tr);
-                // count++;
             }
-            timeoutId = setTimeout(fetchFriends,20000);
+            timeoutId = setTimeout(fetchFriends, 1000);
         }
     }
 }

@@ -16,7 +16,7 @@ public class Person {
 	private String salt;
 	private String firstName;
 	private String lastName;
-    private String status;
+    private String status = "Offline";
     private List<Person> friends;
 
 	public Person(String userId, String password, String firstName,

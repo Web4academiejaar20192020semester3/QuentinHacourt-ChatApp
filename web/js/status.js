@@ -1,10 +1,12 @@
 var xhr = new XMLHttpRequest();
 
 function updateStatus() {
-    var statusText = document.getElementById("status-input").value;
-    xhr.open("POST", "Controller?action=UpdateStatus&status=" + statusText , true);
+    let statusText = document.getElementById("status-input").value;
+    let url = "Controller?action=UpdateStatus&status=" + statusText;
+    xhr.open("POST", url , true);
     xhr.onreadystatechange = getStatus;
     xhr.send(null);
+    statusText.value = "";
 }
 
 function getStatus() {
@@ -60,7 +62,6 @@ function offline() {
 }
 
 function other(status) {
-    alert(status)
     let div = document.getElementById("status-div");
     let p = document.getElementById("status-p");
     p.innerHTML = "";

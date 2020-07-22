@@ -15,7 +15,6 @@ import java.util.List;
 public class GetFriends extends RequestHandler {
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        System.out.println("F");
         HttpSession session = request.getSession();
         Person person = (Person) session.getAttribute("user");
 
@@ -23,9 +22,7 @@ public class GetFriends extends RequestHandler {
         try{
             // TODO: use service instead of person
             response.getWriter().write(toJson(getPersonService().getFriends(person.getUserId())));
-            System.out.println("TEST");
         } catch(IOException e){
-            System.out.println("FAIL :(");
             System.out.println(e.getMessage());
         }
     }
