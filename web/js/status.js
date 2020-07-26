@@ -37,7 +37,7 @@ function online() {
     p.innerHTML = "";
     let text = document.createTextNode("Online");
     p.appendChild(text);
-    p.style.backgroundColor = 'green'
+    p.style.backgroundColor = 'green';
     div.appendChild(p);
 }
 
@@ -47,7 +47,7 @@ function away() {
     p.innerHTML = "";
     let text = document.createTextNode("Away");
     p.appendChild(text);
-    p.style.backgroundColor = 'orange'
+    p.style.backgroundColor = 'orange';
     div.appendChild(p);
 }
 
@@ -57,7 +57,7 @@ function offline() {
     p.innerHTML = "";
     let text = document.createTextNode("Offline");
     p.appendChild(text);
-    p.style.backgroundColor = 'red'
+    p.style.backgroundColor = 'red';
     div.appendChild(p);
 }
 
@@ -67,6 +67,6 @@ function other(status) {
     p.innerHTML = "";
     let text = document.createTextNode(status);
     p.appendChild(text);
-    p.style.backgroundColor = 'blue'
+    p.style.backgroundColor = 'blue';
     div.appendChild(p);
 }
