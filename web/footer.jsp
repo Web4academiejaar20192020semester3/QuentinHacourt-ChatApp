@@ -3,5 +3,5 @@
 <footer>
 	<span class="right"> &copy; Webontwikkeling 4, UC
 		Leuven-Limburg 
-	</span>		
+	</span>
 </footer>

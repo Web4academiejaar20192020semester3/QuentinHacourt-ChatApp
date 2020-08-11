@@ -20,7 +20,6 @@ public class GetFriends extends RequestHandler {
 
         response.setContentType("application/json");
         try{
-            // TODO: use service instead of person
             response.getWriter().write(toJson(getPersonService().getFriends(person.getUserId())));
         } catch(IOException e){
             System.out.println(e.getMessage());

@@ -91,5 +91,7 @@
     <orderEntry type="library" exported="" name="Java EE 6-Java EE 6" level="project" />
     <orderEntry type="library" name="org.ow2.spec.ee:ow2-jstl-1.2-spec:1.0.13" level="project" />
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.6" level="project" />
+    <orderEntry type="library" name="javax.websocket:javax.websocket-api:1.1" level="project" />
+    <orderEntry type="library" name="com.fasterxml.jackson:jackson-datatype-json-org:1.8.0" level="project" />
   </component>
 </module>

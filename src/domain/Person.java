@@ -18,6 +18,7 @@ public class Person {
 	private String lastName;
     private String status = "Offline";
     private List<Person> friends;
+    private int schoenmaat;
 
 	public Person(String userId, String password, String firstName,
 			String lastName) {
@@ -157,5 +158,13 @@ public class Person {
 
     public List<Person> getFriends() {
         return friends;
+    }
+
+    public void setSchoenmaat(int schoenmaat) {
+        this.schoenmaat = schoenmaat;
+    }
+
+    public int getSchoenmaat() {
+        return schoenmaat;
     }
 }

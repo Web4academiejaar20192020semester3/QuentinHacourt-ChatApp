@@ -3,7 +3,7 @@ window.onload = fetchFriends;
 var xhr = new XMLHttpRequest();
 
 function addFriend() {
-    let friendId = document.getElementById("friendId");
+    let friendId = document.getElementById("add-friend-id").value;
     let url = "Controller?action=AddFriend&friendId=" + friendId;
     xhr.open("POST", url , true);
     xhr.onreadystatechange = fetchFriends;

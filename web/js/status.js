@@ -7,6 +7,7 @@ function updateStatus() {
     xhr.onreadystatechange = getStatus;
     xhr.send(null);
     statusText.value = "";
+    console.log('Logging to the console');
 }
 
 function getStatus() {
