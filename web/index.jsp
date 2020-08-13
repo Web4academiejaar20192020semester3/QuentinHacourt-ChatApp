@@ -60,28 +60,19 @@
                 replies:
             </p>
             <div id="replies1">
-                <p>
-                     rating: 0/10
-                </p>
-                <p>
-                     name: Mickey
-                </p>
-                <p>
-                    Hypocrite that you are!
-                    For you trust the chemicals in your brain to tell you they are chemicals.
-                    All knowledge is ultimately based on that which we cannot prove. Will
-                    You fight? Or will you perish like a dog?
-                </p>
+
             </div>
             <div class="input">
                 <h5>Name</h5>
                 <input type="text" id="name1"/>
                 <br>
                 <h5>Rating (../10)</h5>
-                <input type="text" id="rating1"/>
+                <input type="number" id="rating1"/>
                 <br>
                 <h5>Comment</h5>
                 <input type="text" id="comment1"/>
+                <h5>Schoenmaat</h5>
+                <input type="number" id="schoenmaat1"/>
             </div>
             <button class="send-button" type="button" onclick="send(1);">Send</button>
         </article>
@@ -89,39 +80,32 @@
         <article class="topic">
             <h2>Defining a human</h2>
             <p>
-                A human being can be defined as a featherless biped.
+                Can a human be defined as a feathereless biped?
             </p>
             <p>
                 replies:
             </p>
             <div id="replies2">
-                <p>
-                     rating: 0/10
-                </p>
-                <p>
-                     name: Diogenes
-                </p>
-                <p>
-                    Lmao so this is a human being?
-                </p>
-                 <img src="images/human.jpg" alt="Diogenes holding a featherless chicken">
+
             </div>
             <div class="input">
                 <h5>Name</h5>
                 <input type="text" id="name2"/>
                 <br>
                 <h5>Rating (../10)</h5>
-                <input type="text" id="rating2"/>
+                <input type="number" id="rating2"/>
                 <br>
                 <h5>Comment</h5>
                 <input type="text" id="comment2"/>
+                <h5>Schoenmaat</h5>
+                <input type="number" id="schoenmaat2"/>
             </div>
             <button class="send-button" type="button" onclick="send(2);">Send</button>
         </article>
 
         <article class="topic">
             <h2>What's the perfect amount of strings on a guitar?</h2>
-            <p>For me it's 7</p>
+            <p>For me it's 8</p>
             <p>
                 replies:
             </p>
@@ -133,10 +117,12 @@
                 <input type="text" id="name3"/>
                 <br>
                 <h5>Rating (../10)</h5>
-                <input type="text" id="rating3"/>
+                <input type="number" id="rating3"/>
                 <br>
                 <h5>Comment</h5>
                 <input type="text" id="comment3"/>
+                <h5>Schoenmaat</h5>
+                <input type="number" id="schoenmaat3"/>
             </div>
             <button class="send-button" type="button" onclick="send(3);">Send</button>
         </article>
@@ -159,10 +145,12 @@
                 <input type="text" id="name4"/>
                 <br>
                 <h5>Rating (../10)</h5>
-                <input type="text" id="rating4"/>
+                <input type="number" id="rating4"/>
                 <br>
                 <h5>Comment</h5>
                 <input type="text" id="comment4"/>
+                <h5>Schoenmaat</h5>
+                <input type="number" id="schoenmaat4"/>
             </div>
             <button class="send-button" type="button" onclick="send(4);">Send</button>
         </article>
@@ -183,10 +171,12 @@
                 <input type="text" id="name5"/>
                 <br>
                 <h5>Rating (../10)</h5>
-                <input type="text" id="rating5"/>
+                <input type="number" id="rating5"/>
                 <br>
                 <h5>Comment</h5>
                 <input type="text" id="comment5"/>
+                <h5>Schoenmaat</h5>
+                <input type="number" id="schoenmaat5"/>
             </div>
             <button class="send-button" type="button" onclick="send(5);">Send</button>
         </article>

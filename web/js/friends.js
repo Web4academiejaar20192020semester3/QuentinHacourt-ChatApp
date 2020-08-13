@@ -18,12 +18,20 @@ function fetchFriends(){
 }
 
 function getFriends() {
+    let onlineTeller = 0;
+    let offlineTeller = 0;
     if(xhr.status === 200) {
         if(xhr.readyState === 4){
-            clearTable();
+            // clearTable();
             let serverResponse = JSON.parse(xhr.responseText);
             let friendsTable = document.getElementById("friends-table");
+            friendsTable.innerHTML = "";
             for(let person in serverResponse){
+                if (serverResponse[person].status.toLowerCase() === "online") {
+                    onlineTeller++;
+                } else if (serverResponse[person].status.toLowerCase() === "offline") {
+                    offlineTeller++;
+                }
                 let tr = document.createElement("tr");
                 let tdName = document.createElement("td");
                 let tdStatus = document.createElement("td");
@@ -35,6 +43,27 @@ function getFriends() {
                 tr.className = "friendlist";
                 friendsTable.appendChild(tr);
             }
+
+            let onlineRow = document.createElement("tr");
+            let td1 = document.createElement("td");
+            let td2 = document.createElement("td");
+            td1.innerText = "online friends:";
+            td2.innerText = onlineTeller;
+            onlineRow.appendChild(td1);
+            onlineRow.appendChild(td2);
+
+            let offlineRow = document.createElement("tr");
+            let tdOffline1 = document.createElement("td");
+            let tdOffline2 = document.createElement("td");
+            tdOffline1.innerText = "offline friends:"
+            tdOffline2.innerText = offlineTeller;
+
+            offlineRow.appendChild(tdOffline1);
+            offlineRow.appendChild(tdOffline2);
+
+            friendsTable.appendChild(onlineRow);
+            friendsTable.appendChild(offlineRow);
+
             timeoutId = setTimeout(fetchFriends, 1000);
         }
     }

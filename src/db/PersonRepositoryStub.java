@@ -75,4 +75,9 @@ public class PersonRepositoryStub implements PersonRepository {
     public void addFriend(String personId, String friendId){
         persons.get(personId).addFriend(persons.get(friendId));
     }
+
+	@Override
+	public String getFriendInfo(String personID, String friendID) {
+		return persons.get(personID).getFriendInfo(friendID);
+	}
 }

@@ -10,6 +10,8 @@ import java.util.Set;
 @ServerEndpoint("/echo")
 public class BlogEndpoint {
     private static final Set<Session> sessions = Collections.synchronizedSet(new HashSet<Session>());
+    // private HashMap<Integer, String> messages = new HashMap<>();
+
 
     @OnOpen
     public void onOpen(Session session){
@@ -27,7 +29,6 @@ public class BlogEndpoint {
     }
 
     private void sendMessageToAll(String message){
-        System.out.println(message);
         for(Session s : sessions){
             try {
                 s.getBasicRemote().sendText(message);

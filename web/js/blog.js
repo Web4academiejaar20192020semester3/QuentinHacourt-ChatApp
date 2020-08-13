@@ -13,12 +13,15 @@ function send(topicId) {
     let comment = document.getElementById("comment" + topicId).value;
     let name = document.getElementById("name" + topicId).value;
     let rating = document.getElementById("rating" + topicId).value;
-    if (comment.length == 0 || name.length == 0 || rating.length == 0 || isNaN(rating)) {
+    let schoenmaat = document.getElementById("schoenmaat" + topicId).value;
+    if (comment.length == 0 || name.length == 0 ||
+        rating.length == 0 || isNaN(rating) ||
+        schoenmaat.length == 0 || isNaN(schoenmaat)) {
         alert("Some fields are empty!")
     } else if (rating > 10 || rating < 0) {
         alert("Rating is not a number between 0 and 10!");
     } else {
-        let message = "<p>rating: " + rating + "/10</p><p>name: " + name + "</p><p>" + comment + "</p>";
+        let message = "<p>rating: " + rating + "/10</p><p>name: " + name + "</p><p>" + comment + "</p><p>schoenmaat: " + schoenmaat + "</p>";
         webSocket.send(JSON.stringify({id: topicId, comment: message}));
     }
 }

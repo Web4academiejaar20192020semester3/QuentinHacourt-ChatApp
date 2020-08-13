@@ -167,4 +167,20 @@ public class Person {
     public int getSchoenmaat() {
         return schoenmaat;
     }
+
+    public String getFriendInfo(String friendID){
+        String res = "";
+
+        for (Person person : friends) {
+            if (person.getUserId().equals(friendID)){
+                res = "<p>id: " + person.getUserId() + "</p>" +
+                    "<p>first name: " + person.getFirstName() + "</p>" +
+                    "<p>last name: " + person.getLastName() + "</p>" +
+                    "<p>status: " + person.getStatus() + "</p>";
+            }
+        }
+
+
+        return res;
+    }
 }

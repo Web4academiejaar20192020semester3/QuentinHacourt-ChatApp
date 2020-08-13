@@ -50,4 +50,8 @@ public class PersonService {
     public List<Person> getFriends(String userId){
         return getPerson(userId).getFriends();
     }
+
+    public String getFriendInfo(String userID, String friendID){
+        return personRepository.getFriendInfo(userID, friendID);
+    }
 }

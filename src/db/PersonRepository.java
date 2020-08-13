@@ -21,4 +21,6 @@ public interface PersonRepository {
 	public abstract void setStatus(String personId, String status);
 
     public abstract void addFriend(String personId, String friendId);
+
+    public abstract String getFriendInfo(String personID, String freindID);
 }

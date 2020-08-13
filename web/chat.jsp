@@ -73,6 +73,15 @@
             </button>
         </div>
     </section>
+        <input type="text" id="search-friend-id">
+        <button id="search-friend-btn">Search Friend</button>
+        <div id="search-result">
+
+        </div>
+    <section id="search-friend">
+
+
+    </section>
 
 </main>
 <jsp:include page="footer.jsp">

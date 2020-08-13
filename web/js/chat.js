@@ -11,7 +11,10 @@ $(function(){
         sendMessage(friendID, content);
         getMessages(friendID);
     });
-    // TODO: add function for delete message button
+    $("#search-friend-btn").click(function(){
+        let friendID = $("#search-friend-id").val();
+        searchFriend(friendID);
+    })
 });
 
 function sendMessage(friendID, content){
@@ -59,4 +62,16 @@ function deleteMessage(messageID){
         data: {messageID: messageID}
     });
     getMessages($("#chat-friend-id").val());
+}
+
+function searchFriend(friendID) {
+    let url = "Controller?action=SearchFriend"
+    $.ajax({
+        url: url,
+        data: {friendID: friendID},
+        success: function(result) {
+            $("#search-result").empty();
+            $("#search-result").append(result);
+        }
+    });
 }
