@@ -11,6 +11,7 @@ $(function(){
         sendMessage(friendID, content);
         getMessages(friendID);
     });
+    // TODO: add function for delete message button
 });
 
 function sendMessage(friendID, content){
@@ -37,6 +38,25 @@ function getMessages(friendID){
 function addMessages(json){
     $("#conversation").empty();
     for (let i = 0; i < json.length; i++) {
-        $('#conversation').append("<p>"+ json[i].senderID + ": " + json[i].content +"</p>");
+        let message = document.createElement("p");  // Create with DOM
+        message.innerText = json[i].senderID + ": " + json[i].content;
+        let button = document.createElement("button");
+        button.innerText = "Delete";
+        button.onclick = function () {
+            deleteMessage(json[i].messageID);
+        };
+
+
+        $('#conversation').append(message);
+        $('#conversation').append(button);
     }
+}
+
+function deleteMessage(messageID){
+    let url = "Controller?action=DeleteMessage"
+    $.post({
+        url: url,
+        data: {messageID: messageID}
+    });
+    getMessages($("#chat-friend-id").val());
 }

@@ -1,8 +1,10 @@
 package domain;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 public class Message implements Comparable {
+    private String messageID;
     private String senderID;
     private String recieverID;
     private String content;
@@ -12,7 +14,8 @@ public class Message implements Comparable {
         setSenderID(senderID);
         setRecieverID(recieverID);
         setContent(content);
-        setTimestamp(timestamp);
+        setMessageID();
+        setTimestamp();
     }
 
     private void setSenderID(String senderID) {
@@ -39,12 +42,20 @@ public class Message implements Comparable {
         return content;
     }
 
-    private void setTimestamp(LocalDateTime timestamp) {
+    private void setTimestamp() {
         this.timestamp = LocalDateTime.now();
     }
 
     public LocalDateTime getTimestamp() {
         return timestamp;
+    }
+
+    private void setMessageID() {
+        this.messageID = UUID.randomUUID().toString();
+    }
+
+    public String getMessageID() {
+        return messageID;
     }
 
     @Override

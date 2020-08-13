@@ -8,4 +8,6 @@ public interface MessageRepository {
     public abstract void add(Message message);
 
     public abstract List<Message> getMessages();
+
+    public abstract void deleteMessage(String messageID);
 }

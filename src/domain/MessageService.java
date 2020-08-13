@@ -16,7 +16,12 @@ public class MessageService {
         return messageRepository.getMessages();
     }
 
-    public void addMessage(Message message) {
+    public void addMessage(String senderID, String recieverID, String content) {
+        Message message = new Message(senderID, recieverID, content);
         messageRepository.add(message);
+    }
+
+    public void deleteMessage(String messageID) {
+        messageRepository.deleteMessage(messageID);
     }
 }

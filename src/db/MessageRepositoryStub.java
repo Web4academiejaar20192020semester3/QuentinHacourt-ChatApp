@@ -22,4 +22,13 @@ public class MessageRepositoryStub implements MessageRepository{
     public List<Message> getMessages() {
         return messages;
     }
+	@Override
+	public void deleteMessage(String messageID) {
+        for (Message message : messages) {
+            if (message.getMessageID().equals(messageID)) {
+                System.out.println("message found");
+                messages.remove(message);
+            }
+        }
+	}
 }

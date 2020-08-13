@@ -12,7 +12,6 @@ import com.google.gson.JsonObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class GetChat extends RequestHandler {
@@ -37,7 +36,6 @@ public class GetChat extends RequestHandler {
 
         response.setContentType("application/json");
         response.getWriter().write(json);
-        // response.getWriter().write("{}");
         // response.getWriter().write("200");
     }
 
@@ -63,7 +61,7 @@ public class GetChat extends RequestHandler {
             jsonMessage.addProperty("senderID", message.getSenderID());
             jsonMessage.addProperty("recieverID", message.getRecieverID());
             jsonMessage.addProperty("content", message.getContent());
-            // jsonMessages.add("message"+Integer.toString(teller), jsonMessage);
+            jsonMessage.addProperty("messageID", message.getMessageID());
             jsonMessages.add(jsonMessage);
             teller++;
         }
