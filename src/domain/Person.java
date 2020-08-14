@@ -27,6 +27,8 @@ public class Person {
 		setHashedPassword(password);
 		setFirstName(firstName);
 		setLastName(lastName);
+        setGender(gender);
+        setAge(age);
         this.friends = new ArrayList<>();
 	}
 
