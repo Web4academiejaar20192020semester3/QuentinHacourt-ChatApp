@@ -15,6 +15,9 @@ $(function(){
         let friendID = $("#search-friend-id").val();
         searchFriend(friendID);
     })
+    $('#friends-header').click(function(){
+        $(this).nextUntil('tr.friends-header').toggle();
+    });
 });
 
 function sendMessage(friendID, content){

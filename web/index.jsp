@@ -110,7 +110,6 @@
                 replies:
             </p>
             <div id="replies3">
-                 <img src="images/human.jpg" alt="Diogenes holding a featherless chicken">
             </div>
             <div class="input">
                 <h5>Name</h5>
@@ -138,7 +137,6 @@
                 replies:
             </p>
             <div id="replies4">
-                 <img src="images/human.jpg" alt="Diogenes holding a featherless chicken">
             </div>
             <div class="input">
                 <h5>Name</h5>
@@ -164,7 +162,6 @@
                 replies:
             </p>
             <div id="replies5">
-                 <img src="images/human.jpg" alt="Diogenes holding a featherless chicken">
             </div>
             <div class="input">
                 <h5>Name</h5>
@@ -181,6 +178,43 @@
             <button class="send-button" type="button" onclick="send(5);">Send</button>
         </article>
 
+    </section>
+
+    <section id="register">
+        <form method="post" action="Controller?action=AddNewUser">
+            <h1>Register</h1>
+            <p>Please fill in this form to create an account.</p>
+
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" required>
+            <br/>
+
+            <label for="password"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="password" id="password" required>
+            <br/>
+
+            <label for="passwordRepeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Confirm Password" name="passwordRepeat" id="passwordRepeat" required>
+            <br/>
+
+            <label for="firstName"><b>First Name</b></label>
+            <input type="text" placeholder="Enter First Name" name="firstName" id="firstName" required>
+            <br/>
+
+            <label for="lastName"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" name="lastName" id="lastName" required>
+            <br/>
+
+            <label for="gender"><b>gender</b></label>
+            <input type="text" placeholder="Enter Gender" name="gender" id="gender" required>
+            <br/>
+
+            <label for="age"><b>age</b></label>
+            <input type="number" placeholder="Enter Age" name="age" id="age" required>
+            <br/>
+
+            <button type="submit" class="registerbtn">Register</button>
+        </form>
     </section>
 
 

@@ -11,11 +11,11 @@ public class PersonRepositoryStub implements PersonRepository {
 	private Map<String, Person> persons = new HashMap<String, Person>();
 
 	public PersonRepositoryStub () {
-		Person administrator = new Person("bib@ucll.be", "t", "Bib", "Liothekaris");
+		Person administrator = new Person("bib@ucll.be", "t", "Bib", "Liothekaris", "other", 150);
 		add(administrator);
-		Person jan = new Person("jan@ucll.be", "t", "Jan", "Janssens");
+		Person jan = new Person("jan@ucll.be", "t", "Jan", "Janssens", "man", 25);
 		add(jan);
-		Person an = new Person("an@ucll.be", "t", "An", "Cornelissen");
+		Person an = new Person("an@ucll.be", "t", "An", "Cornelissen", "vrouw", 23);
 		add(an);
 	}
 

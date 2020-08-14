@@ -24,8 +24,8 @@ function getFriends() {
         if(xhr.readyState === 4){
             // clearTable();
             let serverResponse = JSON.parse(xhr.responseText);
-            let friendsTable = document.getElementById("friends-table");
-            friendsTable.innerHTML = "";
+            let friendsTableBody = document.getElementById("friends-table-body");
+            friendsTableBody.innerHTML = "";
             for(let person in serverResponse){
                 if (serverResponse[person].status.toLowerCase() === "online") {
                     onlineTeller++;
@@ -41,7 +41,7 @@ function getFriends() {
                 tr.appendChild(tdName);
                 tr.appendChild(tdStatus);
                 tr.className = "friendlist";
-                friendsTable.appendChild(tr);
+                friendsTableBody.appendChild(tr);
             }
 
             let onlineRow = document.createElement("tr");
@@ -61,8 +61,8 @@ function getFriends() {
             offlineRow.appendChild(tdOffline1);
             offlineRow.appendChild(tdOffline2);
 
-            friendsTable.appendChild(onlineRow);
-            friendsTable.appendChild(offlineRow);
+            friendsTableBody.appendChild(onlineRow);
+            friendsTableBody.appendChild(offlineRow);
 
             timeoutId = setTimeout(fetchFriends, 1000);
         }

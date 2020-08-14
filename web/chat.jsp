@@ -27,13 +27,13 @@
     </section>
 
     <table id="friends-table">
-        <thead>
+        <thead id="friends-header">
         <tr>
             <th>Name</th>
             <th>Status</th>
         </tr>
         </thead>
-        <tbody id="friends">
+        <tbody id="friends-table-body">
 
         </tbody>
     </table>

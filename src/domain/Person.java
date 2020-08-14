@@ -18,10 +18,11 @@ public class Person {
 	private String lastName;
     private String status = "Offline";
     private List<Person> friends;
-    private int schoenmaat;
+    private String gender;
+    private int age;
 
 	public Person(String userId, String password, String firstName,
-			String lastName) {
+			String lastName, String gender, int age) {
 		setUserId(userId);
 		setHashedPassword(password);
 		setFirstName(firstName);
@@ -160,12 +161,20 @@ public class Person {
         return friends;
     }
 
-    public void setSchoenmaat(int schoenmaat) {
-        this.schoenmaat = schoenmaat;
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
-    public int getSchoenmaat() {
-        return schoenmaat;
+    public String getGender() {
+        return gender;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
     }
 
     public String getFriendInfo(String friendID){
