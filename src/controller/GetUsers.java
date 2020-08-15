@@ -15,9 +15,14 @@ import java.util.List;
 public class GetUsers extends RequestHandler {
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String res;
         response.setContentType("application/json");
         try{
-            response.getWriter().write(toJson(getPersonService().getPersons()));
+            //res = "{\"users\":";
+            res = toJson(getPersonService().getPersons());
+            //res += "}";
+            System.out.println(res);
+            response.getWriter().write(res);
         } catch(IOException e){
             System.out.println(e.getMessage());
         }
@@ -35,22 +40,6 @@ public class GetUsers extends RequestHandler {
             user.addProperty("userStatus", person.getStatus());
             json.add(user);
         }
-        System.out.println(json.toString());
         return json.toString();
     }
-    // private String toJson(List<Person> list) {
-    //     JsonObject json = new JsonObject();
-    //     for (Person person : list) {
-    //         JsonObject jsonMessage = new JsonObject();
-    //         jsonMessage.addProperty("id", Integer.toString(teller));
-    //         jsonMessage.addProperty("senderID", message.getSenderID());
-    //         jsonMessage.addProperty("recieverID", message.getRecieverID());
-    //         jsonMessage.addProperty("content", message.getContent());
-    //         jsonMessage.addProperty("messageID", message.getMessageID());
-    //         jsonMessages.add(jsonMessage);
-    //         teller++;
-    //     }
-    //     System.out.println(json.toString());
-    //     return jsonMessages.toString();
-    // }
 }

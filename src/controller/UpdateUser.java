@@ -11,11 +11,12 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 
-public class EditUser extends RequestHandler {
+public class UpdateUser extends RequestHandler {
     PersonService personService;
 
     @Override
     public void handleRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        System.out.println("UpdateUser");
         String email;
         String password;
         String passwordRepeat;

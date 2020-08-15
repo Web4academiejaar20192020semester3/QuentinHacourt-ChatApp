@@ -30,7 +30,7 @@ public class AddNewUser extends RequestHandler {
         password = (String) request.getParameter("password");
         passwordRepeat = (String) request.getParameter("passwordRepeat");
         firstName = (String) request.getParameter("firstName");
-        lastName = (String) request.getParameter("email");
+        lastName = (String) request.getParameter("lastName");
         gender = (String) request.getParameter("gender");
         age = Integer.parseInt((String) request.getParameter("age"));
 
